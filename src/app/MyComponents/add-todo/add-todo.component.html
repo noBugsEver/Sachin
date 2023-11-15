@@ -1,0 +1,26 @@
+<div class=" container m-3 button-85 " ><h4>Add Todo</h4>
+<form  (ngSubmit)="onSubmit() ">
+    <div class="mb-3">
+        <label for="title">
+            <h6>Todo Title</h6>
+        </label>
+        <input type="text"  [(ngModel)]="title" class="form-control" name ="title" id="title">
+    </div>
+    <div class=" mb-3">
+        <label for="desc">
+            <h6>Discription</h6>
+        </label>
+        <input type="text"   [(ngModel)]="desc" class="form-control" name="desc" id="desc">
+    </div>
+    <!-- <div class=" mb-3">
+        <label for="type">
+            <h6>Type</h6>
+        </label>
+        <input type="text" [(ngModel)]="type" class="form-control" name="type" id="type">
+    </div> -->
+    <button type="submit" class="btn btn-primary btn-sm button m-3 ">Add Todo </button>
+    
+</form></div>
+
+
+

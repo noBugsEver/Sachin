@@ -1,0 +1,12 @@
+<div class="container mt-3 ">
+  <h1 class="gradient-text">Now Perform Your Tasks On Time With Cognizant's Todos
+  </h1> 
+</div>
+<!-- <app-add-todo (todoAdd)="addTodo($event)" ></app-add-todo>   -->
+<h4 class="m-3 todo">Your Todos</h4>
+<div  *ngIf="this.todos.length===0; else elseBlock"><h4 class="text-center mb-5 dis ">No Todos To Display !!!</h4></div>
+<ng-template #elseBlock>
+<div class="m-4" *ngFor="let todo of todos; index as i">
+  <app-todo-item [todo]="todo" [i]="i" (todoDelete)="deleteTodo($event)" (todoCheckbox)="toggleTodo($event)"></app-todo-item>  
+</div>
+</ng-template>
